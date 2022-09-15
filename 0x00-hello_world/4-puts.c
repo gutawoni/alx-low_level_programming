@@ -1,6 +1,7 @@
 #include <stdio.h>
+/** 
 
-?* this coding challenge by alx
+*this coding challenge by alx
 
 *
 
