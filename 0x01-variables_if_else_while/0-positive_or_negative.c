@@ -3,9 +3,12 @@
 #include <time.h>
 
 /**
-* main - Entry point
-* Return: Always success*/
-int main(void)
+*
+*  main - Entry point
+* Return: Always success
+*/ 
+ 
+ int main(void)
 {
 	int n;
 
