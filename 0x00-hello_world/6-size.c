@@ -1,45 +1,20 @@
-#include <stdio.h>                                                                                                                      
-
-/**                                                                                                                                     
-
-* main - print the string in the puts function                                                                                               
-
-*                                                                                                                                       
-
-* Description using main function                                                                                                       
-
-* this program prints "Programming is like building a multilingual puzzle                                                               
-
-* return : 0                                                                                                                            
-
-*/                                                                                                                                      
-
-int main(void)                                                                                                                          
-
-{            
-
-char c;
-
-int i;
-
-long ll;
-
-long long lll;
-
-float f;                                                                                                                          
-
-        printf("the size of char :id byte(s)\n",sizeof(c) ); 
-
-		printf("the size of char :id byte(s)\n",sizeof(i) );
-
-	    printf("the size of char :id byte(s)\n",sizeof(ll) );
-
-		printf("the size of char :id byte(s)\n",sizeof(lll) );
-
-		printf("the size of char :id byte(s)\n",sizeof(f) );
-
-
-
-        return (0);                                                                                                                     
-
+#include <stdio.h>
+/**
+* main - Prints the sizeof many var types
+*
+* Return: Always 0 (Success)
+*/
+int main(void)
+{
+char a;
+int b;
+long int c;
+long long int d;
+float e;
+printf("Size of a char: %d byte(s)\n", sizeof(a));
+printf("Size of an int: %d byte(s)\n", sizeof(b));
+printf("Size of a long int: %d byte(s)\n", sizeof(c));
+printf("Size of a long long int: %d byte(s)\n", sizeof(d));
+printf("Size of a float: %d byte(s)\n", sizeof(e));
+return (0);
 }
