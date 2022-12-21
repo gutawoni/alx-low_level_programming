@@ -1,49 +1,32 @@
 #include "main.h"
 /**
- * print_number - print integer
- * Return: void
- * @n: number
+ * leet - leet encoding
+ * Return: pointer to arr
+ * @s: string
  */
-void print_number(int n)
+char *leet(char *s)
 {
-	unsigned int size = n;
+	char low_up[5][2] = {{'a', 'A'}, {'e', 'E'}, {'o', 'O'},
+				 {'t', 'T'}, {'l', 'L'}};
 
-	int digits = 0;
+	char values[] = {'4', '3', '0', '7', '1'};
 
-	int i;
+	int i = 0, j;
 
-	if (n < 0)
-		size = -n;
-	if (n == 0)
-		digits = 1;
-
-	while (size >= 1)
+	while (s[i] != 0)
 	{
-		size = size / 10;
-		digits++;
-	}
+		char c = s[i];
 
-	for (i = 0; i < digits; i++)
-	{
-
-		int pow = 1;
-
-		int j;
-
-		int d;
-
-		for (j = 0; j < digits - i - 1; j++)
+		for (j = 0; j < 5; j++)
 		{
-			pow = pow * 10;
+			if (c == low_up[j][0] || c == low_up[j][1])
+			{
+				s[i] = values[j];
+				break;
+			}
 		}
 
-		d = ((n / pow) % 10);
-		if (n < 0)
-		{
-			d = -d;
-			if (i == 0)
-				_putchar(45);
-		}
-		_putchar(48 + d);
+		i++;
 	}
+	return (s);
 }
