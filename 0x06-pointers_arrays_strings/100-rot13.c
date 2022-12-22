@@ -1,31 +1,26 @@
 #include "main.h"
+
 /**
- * leet - leet encoding
- * Return: pointer to arr
- * @s: string
+ * rot13 -  a   function that encodes a string using rot13.
+ * @s: An input string to encode using rot13
+ * Return: An encode string
  */
-char *leet(char *s)
+char *rot13(char *s)
 {
-	char low_up[5][2] = {{'a', 'A'}, {'e', 'E'}, {'o', 'O'},
-				 {'t', 'T'}, {'l', 'L'}};
+	int i = 0;
 
-	char values[] = {'4', '3', '0', '7', '1'};
-
-	int i = 0, j;
-
-	while (s[i] != 0)
+	while (s[i] != '\0')
 	{
-		char c = s[i];
-
-		for (j = 0; j < 5; j++)
+		while ((s[i] >= 'a' && s[i] <= 'z') ||
+				(s[i] >= 'A' && s[i] <= 'Z'))
 		{
-			if (c == low_up[j][0] || c == low_up[j][1])
-			{
-				s[i] = values[j];
-				break;
-			}
+			if ((s[i] >= 'a' && s[i] <= 'm') ||
+					(s[i] >= 'A' && s[i] <= 'M'))
+				s[i] += 13;
+			else
+				s[i] -= 13;
+			i++;
 		}
-
 		i++;
 	}
 	return (s);
